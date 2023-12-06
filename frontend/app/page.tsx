@@ -1,9 +1,9 @@
 "use client";
 import Head from 'next/head';
-import Comic from './components/Comic';
 import {useEffect, useState} from "react";
+import Comic from './components/Comic';
+import {BASE_URL} from "@/app/constants";
 
-const BASE_URL = 'http://localhost:8000/api/comics/'
 
 const HomePage = () => {
   const [comics, setComics] = useState([]);
