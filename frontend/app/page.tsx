@@ -1,6 +1,6 @@
 "use client";
 import Head from 'next/head';
-import {useEffect, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import Comic from './components/Comic';
 import {BASE_URL} from "@/app/constants";
 
@@ -18,12 +18,12 @@ const HomePage = () => {
     fetchComics(true);
   }
 
-  const handleSearchChange = event => {
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
     setRandom(false);
   };
 
-  const handlePageChange = page => {
+  const handlePageChange = (page: number) => {
     setCurrentPage(page);
     setRandom(false);
   };
